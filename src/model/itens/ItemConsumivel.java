@@ -1,4 +1,4 @@
-package model;
+package model.itens;
 
 public class ItemConsumivel {
 }
