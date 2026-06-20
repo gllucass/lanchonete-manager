@@ -1,4 +1,5 @@
 package enums;
 
-public class StatusPedido {
+public enum StatusPedido {
+    CRIADO, PAGO, PREPARANDO, PRONTO, ENTREGUE
 }

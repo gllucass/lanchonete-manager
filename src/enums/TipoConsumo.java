@@ -1,4 +1,5 @@
 package enums;
 
-public class TipoConsumo {
+public enum TipoConsumo {
+    LOCAL, DELIVERY, RETIRADA
 }
