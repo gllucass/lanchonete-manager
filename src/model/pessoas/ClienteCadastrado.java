@@ -28,3 +28,4 @@ public class ClienteCadastrado extends Pessoa {
         return pontosFidelidade;
     }
 }
+
