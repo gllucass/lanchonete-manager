@@ -1,6 +1,9 @@
 package model.itens;
 
-public abstract class ItemConsumivel {
+import java.io.Serializable;
+
+public abstract class ItemConsumivel implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String nome;
     private double precoBase;
 

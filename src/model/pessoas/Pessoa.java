@@ -1,6 +1,9 @@
 package model.pessoas;
 
-public class Pessoa {
+import java.io.Serializable;
+
+public class Pessoa implements Serializable {
+    private static final long serialVersionUID = 1L;
     // Atributos base encapsulados (private)
     private int id;
     private String nome;

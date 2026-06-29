@@ -1,6 +1,9 @@
 package model.pagamentos;
 
-public abstract class Pagamento {
+import java.io.Serializable;
+
+public abstract class Pagamento implements Serializable {
+    private static final long serialVersionUID = 1L;
     private double valor;
 
     public Pagamento(double valor) {
