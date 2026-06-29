@@ -6,22 +6,25 @@ import model.itens.ItemConsumivel;
 import model.pagamentos.Pagamento;
 import model.pessoas.Pessoa;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido {
+public class Pedido implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int id;
     private TipoConsumo tipoConsumo;
     private Pessoa cliente;
     private StatusPedido status;
     private List<ItemConsumivel> itens;
     private List<Pagamento> pagamentos;
+    private Integer numeroMesa;
 
     public Pedido(int id, TipoConsumo tipoConsumo, Pessoa cliente) {
         this.id = id;
         this.tipoConsumo = tipoConsumo;
         this.cliente = cliente;
-        this.status = StatusPedido.CRIADO; // O pedido sempre nasce neste estado
+        this.status = StatusPedido.CRIADO;
         this.itens = new ArrayList<>();
         this.pagamentos = new ArrayList<>();
     }
@@ -51,4 +54,6 @@ public class Pedido {
     public void setStatus(StatusPedido status) { this.status = status; }
     public List<ItemConsumivel> getItens() { return itens; }
     public List<Pagamento> getPagamentos() { return pagamentos; }
+    public Integer getNumeroMesa() { return numeroMesa; }
+    public void setNumeroMesa(Integer numeroMesa) { this.numeroMesa = numeroMesa; }
 }
