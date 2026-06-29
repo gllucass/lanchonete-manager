@@ -12,4 +12,6 @@ public class PagamentoCartao extends Pagamento {
     public void processarPagamento() {
         System.out.println("Pagamento processado: Tipo = " + this.tipo + ", Valor = " + getValor());
     }
+
+    public String getTipo() { return tipo; }
 }

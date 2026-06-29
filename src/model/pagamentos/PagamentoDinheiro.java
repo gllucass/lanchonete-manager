@@ -1,5 +1,7 @@
 package model.pagamentos;
 
+import exceptions.RegraNegocioException;
+
 public class PagamentoDinheiro extends Pagamento {
     private double valorRecebido;
 
@@ -11,10 +13,11 @@ public class PagamentoDinheiro extends Pagamento {
     @Override
     public void processarPagamento() {
         if (valorRecebido < getValor()) {
-            throw new RuntimeException("Valor recebido é menor que o valor do pagamento.");
-        } else {
-            double troco = valorRecebido - getValor();
-            System.out.println("Pagamento em dinheiro processado. Troco: " + troco);
+            throw new RegraNegocioException("Valor recebido é menor que o valor do pagamento.");
         }
+        double troco = valorRecebido - getValor();
+        System.out.printf("Pagamento em dinheiro processado. Troco: R$ %.2f%n", troco);
     }
+
+    public double getValorRecebido() { return valorRecebido; }
 }
