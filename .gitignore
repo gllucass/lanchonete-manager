@@ -27,4 +27,7 @@ bin/
 .vscode/
 
 ### Mac OS ###
-.DS_Storedados/
+.DS_Store
+
+### Dados da aplicacao (persistencia em runtime) ###
+dados/

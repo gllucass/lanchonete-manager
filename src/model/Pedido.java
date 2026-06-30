@@ -32,7 +32,6 @@ public class Pedido implements Serializable {
     public double calcularTotal() {
         double total = 0;
         for (ItemConsumivel item : itens) {
-            // Todo aguardando implementação da classe itemConsumivel e suas classes filhas
             total += item.calcularPrecoFinal();
         }
         return total;
